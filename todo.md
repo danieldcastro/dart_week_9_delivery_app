@@ -13,4 +13,12 @@
       - [x] Criar SizeExtensions Helper;
   - [ ] Criar ApplicationBindings;
   - [ ] Criar Formatter Mixin;
-- [ ] Construir SplashPage;  
+- [x] Construir SplashPage (view);  
+- [ ] Preparar Model Produto;
+- [ ] Criar Repository para busca de produtos;
+- [ ] Construir Home (view);
+- [ ] Criar primeiro Bloc;
+- [ ] Preparar estado e status da tela;
+- [ ] Preparar BaseState;
+- [ ] Criar Link entre controller e repository;
+- [ ] Implementar Home;
