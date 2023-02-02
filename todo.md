@@ -22,7 +22,7 @@
 - [ ] Criar primeiro Bloc;
   - [x] Implementar Pattern Matching; 
 - [x] Preparar estado e status da tela;
-- [ ] Preparar BaseState;
+- [x] Preparar BaseState;
 - [x] Criar Link entre controller e repository;
 - [x] Implementar Home;
 - [ ] Iniciar tela de detalhe de produto;

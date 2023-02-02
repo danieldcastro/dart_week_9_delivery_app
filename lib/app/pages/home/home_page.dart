@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../core/ui/helpers/loader.dart';
-import '../../core/ui/helpers/messages.dart';
+import '../../core/ui/base_state/base_state.dart';
 import '../../core/ui/widgets/delivery_app_bar.dart';
 import 'home_controller.dart';
 import 'home_state.dart';
@@ -15,13 +14,10 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with Loader, Messages {
+class _HomePageState extends BaseState<HomePage, HomeController> {
   @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      context.read<HomeController>().loadProducts();
-    });
+  void onReady() {
+    controller.loadProducts();
   }
 
   @override
