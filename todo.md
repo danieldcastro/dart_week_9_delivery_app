@@ -33,7 +33,7 @@
 - [x] Atualizar quantidade de produto;
   - [x] Receber Order Product;
 - [x] Remover item da sacola;
-- [ ] Criar botão de sacola de produtos;
+- [x] Criar botão de sacola de produtos;
 - [ ] Enviar para fechar pedido;
 - [ ] Montar tela de login;
 - [ ] Montar tela de Cadastro de login;  

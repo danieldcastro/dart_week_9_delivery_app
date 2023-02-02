@@ -122,63 +122,63 @@ class _ProductDetailsPageState
                 ),
               ),
               Container(
-                  width: context.percentWidth(.5),
-                  padding: const EdgeInsets.all(8),
-                  height: 68,
-                  child: BlocBuilder<ProductDetailsController, int>(
-                    builder: (context, amount) {
-                      return ElevatedButton(
-                          style: amount == 0
-                              ? ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red)
-                              : null,
-                          onPressed: () {
-                            amount == 0
-                                ? _showConfirmDelete(amount)
-                                : {
-                                    Navigator.pop(
-                                      context,
-                                      OrderProductDto(
-                                          product: widget.product,
-                                          amount: amount),
-                                    )
-                                  };
-                          },
-                          child: Visibility(
-                            visible: amount > 0,
-                            replacement: Text(
-                              'Excluir produto',
-                              style: context.textStyles.textExtraBold
-                                  .copyWith(fontSize: 13),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Adicionar',
+                width: context.percentWidth(.5),
+                padding: const EdgeInsets.all(8),
+                height: 68,
+                child: BlocBuilder<ProductDetailsController, int>(
+                  builder: (context, amount) {
+                    return ElevatedButton(
+                        style: amount == 0
+                            ? ElevatedButton.styleFrom(
+                                backgroundColor: Colors.red)
+                            : null,
+                        onPressed: () {
+                          amount == 0
+                              ? _showConfirmDelete(amount)
+                              : {
+                                  Navigator.pop(
+                                    context,
+                                    OrderProductDto(
+                                        product: widget.product,
+                                        amount: amount),
+                                  )
+                                };
+                        },
+                        child: Visibility(
+                          visible: amount > 0,
+                          replacement: Text(
+                            'Excluir produto',
+                            style: context.textStyles.textExtraBold
+                                .copyWith(fontSize: 13),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Adicionar',
+                                style: context.textStyles.textExtraBold
+                                    .copyWith(fontSize: 13),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: AutoSizeText(
+                                  (widget.product.price * amount).currencyPTBR,
+                                  textAlign: TextAlign.center,
+                                  maxFontSize: 13,
+                                  minFontSize: 5,
+                                  maxLines: 1,
                                   style: context.textStyles.textExtraBold
                                       .copyWith(fontSize: 13),
                                 ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Expanded(
-                                  child: AutoSizeText(
-                                    (widget.product.price * amount)
-                                        .currencyPTBR,
-                                    textAlign: TextAlign.center,
-                                    maxFontSize: 13,
-                                    minFontSize: 5,
-                                    maxLines: 1,
-                                    style: context.textStyles.textExtraBold
-                                        .copyWith(fontSize: 13),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ));
-                    },
-                  ))
+                              ),
+                            ],
+                          ),
+                        ));
+                  },
+                ),
+              ),
             ],
           )
         ],
