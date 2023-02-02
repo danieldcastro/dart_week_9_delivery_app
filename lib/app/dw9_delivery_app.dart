@@ -1,6 +1,7 @@
-import 'package:dw9_delivery_app/app/core/ui/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
+import 'core/provider/application_binding.dart';
+import 'core/ui/theme/theme_config.dart';
 import 'pages/splash/splash_page.dart';
 
 class Dw9DeliveryApp extends StatelessWidget {
@@ -8,12 +9,14 @@ class Dw9DeliveryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Vakinha Burger',
-      theme: ThemeConfig.theme,
-      routes: {
-        '/': (context) => const SplashPage(),
-      },
+    return ApplicationBinding(
+      child: MaterialApp(
+        title: 'Vakinha Burger',
+        theme: ThemeConfig.theme,
+        routes: {
+          '/': (context) => const SplashPage(),
+        },
+      ),
     );
   }
 }
