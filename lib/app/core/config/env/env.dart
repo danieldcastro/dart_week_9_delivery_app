@@ -11,5 +11,5 @@ class Env {
 
   Future<void> load() => dotenv.load();
 
-  String? operator [](String key) => dotenv.env['key'];
+  String? operator [](String key) => dotenv.env[key];
 }

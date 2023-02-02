@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'core/provider/application_binding.dart';
 import 'core/ui/theme/theme_config.dart';
-import 'pages/home/home_page.dart';
+import 'pages/home/home_router.dart';
 import 'pages/splash/splash_page.dart';
 
 class Dw9DeliveryApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class Dw9DeliveryApp extends StatelessWidget {
         theme: ThemeConfig.theme,
         routes: {
           '/': (context) => const SplashPage(),
-          '/home': (context) => const HomePage(),
+          '/home': (context) => HomeRouter.page,
         },
       ),
     );
