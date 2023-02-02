@@ -34,8 +34,8 @@
   - [x] Receber Order Product;
 - [x] Remover item da sacola;
 - [x] Criar botão de sacola de produtos;
+- [x] Montar tela de login;
+- [x] Montar tela de Cadastro de login;  
 - [ ] Enviar para fechar pedido;
-- [ ] Montar tela de login;
-- [ ] Montar tela de Cadastro de login;  
 - [ ] Implementar Cadastro de login;
 - [ ] Implementar login; 

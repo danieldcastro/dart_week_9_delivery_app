@@ -69,7 +69,9 @@ class LoginPage extends StatelessWidget {
                       style: context.textStyles.textBold,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/auth/register');
+                      },
                       child: Text(
                         'Cadastre-se',
                         style: context.textStyles.textBold
