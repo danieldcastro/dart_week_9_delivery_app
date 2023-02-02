@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../core/ui/helpers/size_extensions.dart';
 import '../../core/ui/styles/text_styles.dart';
 import '../../core/ui/widgets/delivery_app_bar.dart';
+import '../../core/ui/widgets/delivery_increment_decrement_button.dart';
 
 class ProductDetailsPage extends StatelessWidget {
   const ProductDetailsPage({super.key});
@@ -52,9 +53,11 @@ class ProductDetailsPage extends StatelessWidget {
           const Divider(),
           Row(
             children: [
-              SizedBox(
+              Container(
+                  height: 68,
+                  padding: const EdgeInsets.all(8),
                   width: context.percentWidth(.5),
-                  child: const Text('Botão increment')),
+                  child: const DeliveryIncrementDecrementButton()),
               Container(
                   width: context.percentWidth(.5),
                   padding: const EdgeInsets.all(8),

@@ -26,8 +26,9 @@
 - [x] Criar Link entre controller e repository;
 - [x] Implementar Home;
 - [x] Criar tela de detalhe de produto;
-- [ ] Criar botão IncrementDecrementButton;
+- [x] Criar botão IncrementDecrementButton;
 - [ ] Criar Model OrderProduct;
+- [ ] Implementar tela de detalhe de produtos;
 - [ ] Adicionar produto na sacola de compras;
 - [ ] Atualizar quantidade de produto;
   - [ ] Receber Order Product;
