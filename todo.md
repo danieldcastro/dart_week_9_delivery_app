@@ -27,8 +27,8 @@
 - [x] Implementar Home;
 - [x] Criar tela de detalhe de produto;
 - [x] Criar botão IncrementDecrementButton;
-- [ ] Criar Model OrderProduct;
-- [ ] Implementar tela de detalhe de produtos;
+- [x] Criar Model OrderProduct;
+- [x] Implementar tela de detalhe de produtos;
 - [ ] Adicionar produto na sacola de compras;
 - [ ] Atualizar quantidade de produto;
   - [ ] Receber Order Product;

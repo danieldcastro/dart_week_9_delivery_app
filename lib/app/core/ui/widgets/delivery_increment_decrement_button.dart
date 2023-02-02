@@ -4,7 +4,16 @@ import '../styles/app_colors.dart';
 import '../styles/text_styles.dart';
 
 class DeliveryIncrementDecrementButton extends StatelessWidget {
-  const DeliveryIncrementDecrementButton({super.key});
+  final int amount;
+  final VoidCallback incrementTap;
+  final VoidCallback decrementTap;
+
+  const DeliveryIncrementDecrementButton({
+    super.key,
+    required this.amount,
+    required this.incrementTap,
+    required this.decrementTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,26 +22,32 @@ class DeliveryIncrementDecrementButton extends StatelessWidget {
         border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(7),
       ),
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
-            '-',
-            style: context.textStyles.textMedium
-                .copyWith(fontSize: 22, color: Colors.grey),
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        InkWell(
+          onTap: decrementTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              '-',
+              style: context.textStyles.textMedium
+                  .copyWith(fontSize: 22, color: Colors.grey),
+            ),
           ),
         ),
         Text(
-          '1',
+          amount.toString(),
           style: context.textStyles.textRegular
               .copyWith(fontSize: 17, color: context.colors.secondary),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
-            '+',
-            style: context.textStyles.textMedium
-                .copyWith(fontSize: 22, color: context.colors.secondary),
+        InkWell(
+          onTap: incrementTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              '+',
+              style: context.textStyles.textMedium
+                  .copyWith(fontSize: 22, color: context.colors.secondary),
+            ),
           ),
         ),
       ]),
