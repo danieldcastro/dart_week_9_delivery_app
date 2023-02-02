@@ -14,8 +14,8 @@
   - [ ] Criar ApplicationBindings;
   - [ ] Criar Formatter Mixin;
 - [x] Construir SplashPage (view);  
-- [ ] Preparar Model Produto;
-- [ ] Criar Repository para busca de produtos;
+- [x] Preparar Model Produto;
+- [x] Criar Repository para busca de produtos;
 - [ ] Construir Home (view);
 - [ ] Criar primeiro Bloc;
 - [ ] Preparar estado e status da tela;
