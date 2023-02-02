@@ -11,14 +11,18 @@
   - [x] Criar RestClient;
   - [ ] Criar Helpers
       - [x] Criar SizeExtensions Helper;
-  - [ ] Criar ApplicationBindings;
-  - [ ] Criar Formatter Mixin;
+      - [x] Criar loader helper;
+      - [x] Criar messages helper;
+  - [x] Criar ApplicationBindings;
+  - [x] Criar Formatter Extension;
 - [x] Construir SplashPage (view);  
 - [x] Preparar Model Produto;
 - [x] Criar Repository para busca de produtos;
-- [ ] Construir Home (view);
+- [x] Construir Home (view);
 - [ ] Criar primeiro Bloc;
-- [ ] Preparar estado e status da tela;
+  - [x] Implementar Pattern Matching; 
+- [x] Preparar estado e status da tela;
 - [ ] Preparar BaseState;
-- [ ] Criar Link entre controller e repository;
-- [ ] Implementar Home;
+- [x] Criar Link entre controller e repository;
+- [x] Implementar Home;
+- [ ] Iniciar tela de detalhe de produto;
