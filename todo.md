@@ -32,7 +32,7 @@
 - [x] Adicionar produto na sacola de compras;
 - [x] Atualizar quantidade de produto;
   - [x] Receber Order Product;
-- [ ] Remover item da sacola;
+- [x] Remover item da sacola;
 - [ ] Criar botão de sacola de produtos;
 - [ ] Enviar para fechar pedido;
 - [ ] Montar tela de login;
