@@ -14,8 +14,9 @@ import 'product_details_controller.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   final ProductModel product;
+  final OrderProductDto? order;
 
-  const ProductDetailsPage({super.key, required this.product});
+  const ProductDetailsPage({super.key, required this.product, this.order});
 
   @override
   State<ProductDetailsPage> createState() => _ProductDetailsPageState();
@@ -23,6 +24,13 @@ class ProductDetailsPage extends StatefulWidget {
 
 class _ProductDetailsPageState
     extends BaseState<ProductDetailsPage, ProductDetailsController> {
+  @override
+  void initState() {
+    super.initState();
+    final amount = widget.order?.amount ?? 1;
+    controller.initial(amount, widget.order != null);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

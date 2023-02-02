@@ -30,8 +30,9 @@
 - [x] Criar Model OrderProduct;
 - [x] Implementar tela de detalhe de produtos;
 - [x] Adicionar produto na sacola de compras;
-- [ ] Atualizar quantidade de produto;
-  - [ ] Receber Order Product;
+- [x] Atualizar quantidade de produto;
+  - [x] Receber Order Product;
+- [ ] Remover item da sacola;
 - [ ] Criar botão de sacola de produtos;
 - [ ] Enviar para fechar pedido;
 - [ ] Montar tela de login;
