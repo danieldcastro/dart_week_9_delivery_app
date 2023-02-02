@@ -1,3 +1,4 @@
+import 'package:dw9_delivery_app/app/pages/product_details/product_details_router.dart';
 import 'package:flutter/material.dart';
 
 import 'core/provider/application_binding.dart';
@@ -17,6 +18,7 @@ class Dw9DeliveryApp extends StatelessWidget {
         routes: {
           '/': (context) => const SplashPage(),
           '/home': (context) => HomeRouter.page,
+          '/productDetails': (context) => ProductDetailsRouter.page,
         },
       ),
     );

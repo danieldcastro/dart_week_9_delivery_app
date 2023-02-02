@@ -25,4 +25,15 @@
 - [x] Preparar BaseState;
 - [x] Criar Link entre controller e repository;
 - [x] Implementar Home;
-- [ ] Iniciar tela de detalhe de produto;
+- [x] Criar tela de detalhe de produto;
+- [ ] Criar botão IncrementDecrementButton;
+- [ ] Criar Model OrderProduct;
+- [ ] Adicionar produto na sacola de compras;
+- [ ] Atualizar quantidade de produto;
+  - [ ] Receber Order Product;
+- [ ] Criar botão de sacola de produtos;
+- [ ] Enviar para fechar pedido;
+- [ ] Montar tela de login;
+- [ ] Montar tela de Cadastro de login;  
+- [ ] Implementar Cadastro de login;
+- [ ] Implementar login; 
