@@ -29,7 +29,7 @@
 - [x] Criar botão IncrementDecrementButton;
 - [x] Criar Model OrderProduct;
 - [x] Implementar tela de detalhe de produtos;
-- [ ] Adicionar produto na sacola de compras;
+- [x] Adicionar produto na sacola de compras;
 - [ ] Atualizar quantidade de produto;
   - [ ] Receber Order Product;
 - [ ] Criar botão de sacola de produtos;
