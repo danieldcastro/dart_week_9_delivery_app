@@ -1,3 +1,4 @@
+import 'package:dw9_delivery_app/app/pages/home/home_controller.dart';
 import 'package:dw9_delivery_app/app/repositories/products/products_repository.dart';
 import 'package:dw9_delivery_app/app/repositories/products/products_repository_impl.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,9 @@ class HomeRouter {
             create: (context) => ProductsRepositoryImpl(
               dio: context.read(),
             ),
+          ),
+          Provider(
+            create: (context) => HomeController(context.read()),
           )
         ],
         child: const HomePage(),
