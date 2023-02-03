@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dw9_delivery_app/app/core/rest_client/custom_dio.dart';
+import 'package:dw9_delivery_app/app/repositories/products/auth/auth_repository.dart';
 import 'package:dw9_delivery_app/app/repositories/products/auth/auth_repository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +20,7 @@ class ApplicationBinding extends StatelessWidget {
         Provider(
           create: (context) => CustomDio(),
         ),
-        Provider(
+        Provider<AuthRepository>(
           create: (context) => AuthRepositoryImpl(
             dio: context.read(),
           ),

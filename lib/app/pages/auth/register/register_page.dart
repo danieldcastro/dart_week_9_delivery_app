@@ -124,7 +124,10 @@ class _RegisterPageState extends BaseState<RegisterPage, RegisterController> {
                       final valid = _formKey.currentState?.validate() ?? false;
                       if (valid) {
                         controller.register(
-                            _emailEC.text, _emailEC.text, _passwordEC.text);
+                          _emailEC.text,
+                          _emailEC.text,
+                          _passwordEC.text,
+                        );
                       }
                     },
                     width: context.screenWidth,
