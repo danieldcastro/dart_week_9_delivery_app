@@ -19,7 +19,7 @@
 - [x] Preparar Model Produto;
 - [x] Criar Repository para busca de produtos;
 - [x] Construir Home (view);
-- [ ] Criar primeiro Bloc;
+- [x] Criar primeiro Bloc;
   - [x] Implementar Pattern Matching; 
 - [x] Preparar estado e status da tela;
 - [x] Preparar BaseState;
@@ -36,9 +36,9 @@
 - [x] Criar botão de sacola de produtos;
 - [x] Montar tela de login;
 - [x] Montar tela de Cadastro de login;  
-- [ ] Enviar para fechar pedido;
-- [ ] Implementar Cadastro de login;
+- [x] Implementar Cadastro de login;
 - [ ] Implementar login; 
+- [ ] Enviar para fechar pedido;
 - [ ] Construir OrderPage (view)
 - [ ] Implementar authInterceptor para adicionar token na requisição;
 - [ ] Caso login tenha expirado. voltar para home com mensagem;
