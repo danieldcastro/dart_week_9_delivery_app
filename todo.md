@@ -37,9 +37,9 @@
 - [x] Montar tela de login;
 - [x] Montar tela de Cadastro de login;  
 - [x] Implementar Cadastro de login;
-- [ ] Implementar login; 
-- [ ] Enviar para fechar pedido;
-- [ ] Construir OrderPage (view)
+- [x] Implementar login; 
+- [x] Enviar para fechar pedido;
+- [x] Construir OrderPage (view)
 - [ ] Criar IncrementDecrementButton.compact;
 - [ ] Carregar os produtos na tela orderPage;
 - [ ] Implementar authInterceptor para adicionar token na requisição;
