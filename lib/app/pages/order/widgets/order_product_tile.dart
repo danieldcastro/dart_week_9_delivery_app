@@ -47,7 +47,7 @@ class OrderProductTile extends StatelessWidget {
                         style: context.textStyles.textMedium.copyWith(
                             color: context.colors.secondary, fontSize: 14),
                       ),
-                      DeliveryIncrementDecrementButton(
+                      DeliveryIncrementDecrementButton.compact(
                         amount: 1,
                         incrementTap: () {},
                         decrementTap: () {},
