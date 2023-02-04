@@ -40,11 +40,12 @@
 - [ ] Implementar login; 
 - [ ] Enviar para fechar pedido;
 - [ ] Construir OrderPage (view)
-- [ ] Implementar authInterceptor para adicionar token na requisição;
-- [ ] Caso login tenha expirado. voltar para home com mensagem;
-- [ ] Validação de formulários;
 - [ ] Criar IncrementDecrementButton.compact;
 - [ ] Carregar os produtos na tela orderPage;
+- [ ] Implementar authInterceptor para adicionar token na requisição;
+- [ ] Buscar dados de forma de pagamento;
+- [ ] Validação de formulários;
+- [ ] Caso login tenha expirado. voltar para home com mensagem;
 - [ ] Incrementar produto na OrderPage;
 - [ ] Decrementar produto na OrderPage;
 - [ ] Atualizar sacola ao voltar para o menu;
