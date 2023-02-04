@@ -45,7 +45,12 @@
 - [ ] Implementar authInterceptor para adicionar token na requisição;
 - [ ] Buscar dados de forma de pagamento;
 - [ ] Validação de formulários;
-- [ ] Caso login tenha expirado. voltar para home com mensagem;
 - [ ] Incrementar produto na OrderPage;
 - [ ] Decrementar produto na OrderPage;
 - [ ] Atualizar sacola ao voltar para o menu;
+- [ ] Deletar produto quando decrementar para 0;
+- [ ] Criar confirmação para exclusão de produto;
+- [ ] Limpar bag;
+- [ ] Tratar erros;
+- [ ] Criar Order Repository;
+- [ ] Tratar login Expirado;
