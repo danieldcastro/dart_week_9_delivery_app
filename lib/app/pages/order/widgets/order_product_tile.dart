@@ -56,7 +56,9 @@ class OrderProductTile extends StatelessWidget {
                         incrementTap: () => context
                             .read<OrderController>()
                             .incrementProduct(index),
-                        decrementTap: () {},
+                        decrementTap: () => context
+                            .read<OrderController>()
+                            .decrementProduct(index),
                       ),
                     ],
                   )
