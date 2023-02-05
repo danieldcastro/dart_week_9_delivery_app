@@ -10,7 +10,7 @@ class AuthInterceptor extends Interceptor {
 
     options.headers['Authorization'] = 'Bearer $accessToken';
 
-    handler.next(options);
+    return handler.next(options);
   }
 
   @override
@@ -21,9 +21,9 @@ class AuthInterceptor extends Interceptor {
       final sp = await SharedPreferences.getInstance();
       sp.clear();
       //Redirecionar o usuário para a home
-      handler.next(err);
+      return handler.next(err);
     } else {
-      handler.next(err);
+      return handler.next(err);
     }
   }
 }
