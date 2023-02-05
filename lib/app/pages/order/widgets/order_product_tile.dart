@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/config/env/extensions/formatter_extension.dart';
 import '../../../core/ui/styles/app_colors.dart';
 import '../../../core/ui/styles/text_styles.dart';
 import '../../../core/ui/widgets/delivery_increment_decrement_button.dart';
@@ -17,12 +18,13 @@ class OrderProductTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final product = orderProduct.product;
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Row(
         children: [
           Image.network(
-            'https://burgerx.com.br/assets/img/galeria/burgers/x-burger.jpg',
+            product.image,
             width: 100,
             height: 100,
             fit: BoxFit.cover,
@@ -34,7 +36,7 @@ class OrderProductTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Título',
+                    product.name,
                     style: context.textStyles.textRegular.copyWith(
                       fontSize: 16,
                     ),
@@ -43,12 +45,12 @@ class OrderProductTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Preço',
+                        (orderProduct.amount * product.price).currencyPTBR,
                         style: context.textStyles.textMedium.copyWith(
                             color: context.colors.secondary, fontSize: 14),
                       ),
                       DeliveryIncrementDecrementButton.compact(
-                        amount: 1,
+                        amount: orderProduct.amount,
                         incrementTap: () {},
                         decrementTap: () {},
                       ),

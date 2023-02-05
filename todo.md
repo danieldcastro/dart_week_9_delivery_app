@@ -40,8 +40,8 @@
 - [x] Implementar login; 
 - [x] Enviar para fechar pedido;
 - [x] Construir OrderPage (view)
-- [ ] Criar IncrementDecrementButton.compact;
-- [ ] Carregar os produtos na tela orderPage;
+- [x] Criar IncrementDecrementButton.compact;
+- [x] Carregar os produtos na tela orderPage;
 - [ ] Implementar authInterceptor para adicionar token na requisição;
 - [ ] Buscar dados de forma de pagamento;
 - [ ] Validação de formulários;
