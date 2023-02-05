@@ -42,10 +42,10 @@
 - [x] Construir OrderPage (view)
 - [x] Criar IncrementDecrementButton.compact;
 - [x] Carregar os produtos na tela orderPage;
-- [x] Implementar authInterceptor para adicionar token na requisição;
+- [x] Implementar authInterceptor parza adicionar token na requisição;
 - [x] Buscar dados de forma de pagamento;
 - [x] Validação de formulários;
-- [ ] Incrementar produto na OrderPage;
+- [x] Incrementar produto na OrderPage;
 - [ ] Decrementar produto na OrderPage;
 - [ ] Atualizar sacola ao voltar para o menu;
 - [ ] Deletar produto quando decrementar para 0;

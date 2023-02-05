@@ -7,7 +7,13 @@ import 'package:match/match.dart';
 part 'order_state.g.dart';
 
 @match
-enum OrderStatus { initial, loading, loaded, error }
+enum OrderStatus {
+  initial,
+  loading,
+  loaded,
+  error,
+  updateOrder,
+}
 
 class OrderState extends Equatable {
   final OrderStatus status;
