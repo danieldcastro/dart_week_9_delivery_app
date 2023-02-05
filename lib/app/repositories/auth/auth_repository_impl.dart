@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 
-import '../../../core/exceptions/repository_exception.dart';
-import '../../../core/exceptions/unauthorized_exception.dart';
-import '../../../core/rest_client/custom_dio.dart';
-import '../../../models/auth_model.dart';
+import '../../core/exceptions/repository_exception.dart';
+import '../../core/exceptions/unauthorized_exception.dart';
+import '../../core/rest_client/custom_dio.dart';
+import '../../models/auth_model.dart';
 import 'auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {

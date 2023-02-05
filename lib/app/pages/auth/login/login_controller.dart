@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/exceptions/unauthorized_exception.dart';
-import '../../../repositories/products/auth/auth_repository.dart';
+import '../../../repositories/auth/auth_repository.dart';
 import 'login_state.dart';
 
 class LoginController extends Cubit<LoginState> {
