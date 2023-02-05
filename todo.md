@@ -46,8 +46,8 @@
 - [x] Buscar dados de forma de pagamento;
 - [x] Validação de formulários;
 - [x] Incrementar produto na OrderPage;
-- [ ] Decrementar produto na OrderPage;
-- [ ] Atualizar sacola ao voltar para o menu;
+- [x] Decrementar produto na OrderPage;
+- [x] Atualizar sacola ao voltar para o menu;
 - [ ] Deletar produto quando decrementar para 0;
 - [ ] Criar confirmação para exclusão de produto;
 - [ ] Limpar bag;
