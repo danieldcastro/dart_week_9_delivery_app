@@ -5,7 +5,6 @@ class AuthInterceptor extends Interceptor {
   @override
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
-    super.onRequest(options, handler);
     final sp = await SharedPreferences.getInstance();
     final accessToken = sp.getString('accessToken');
 
