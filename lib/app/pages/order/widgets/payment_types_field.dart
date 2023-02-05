@@ -7,31 +7,46 @@ import '../../../models/payment_type_model.dart';
 
 class PaymentTypesField extends StatelessWidget {
   final List<PaymentTypeModel> paymentTypes;
-  const PaymentTypesField({super.key, required this.paymentTypes});
+  final ValueChanged<int> valueChanged;
+  final bool valid;
+  final String valueSelected;
+
+  const PaymentTypesField({
+    super.key,
+    required this.paymentTypes,
+    required this.valueChanged,
+    required this.valid,
+    required this.valueSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(
             'Forma de pagamento',
             style: context.textStyles.textRegular.copyWith(fontSize: 16),
           ),
-          SmartSelect<String>.single(
-            title: 'Selecione uma forma de pagamento',
-            selectedValue: '',
-            modalType: S2ModalType.bottomSheet,
-            onChange: (value) {},
-            tileBuilder: (context, state) {
-              return InkWell(
-                onTap: state.showModal,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+        ),
+        SmartSelect<String>.single(
+          title: 'Selecione uma forma de pagamento',
+          selectedValue: valueSelected,
+          modalType: S2ModalType.bottomSheet,
+          onChange: (selected) {
+            valueChanged(int.parse(selected.value));
+          },
+          tileBuilder: (context, state) {
+            return InkWell(
+              onTap: state.showModal,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Container(
                       padding: const EdgeInsets.all(10),
                       width: context.screenWidth,
                       child: Row(
@@ -45,29 +60,47 @@ class PaymentTypesField extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
-            choiceItems: S2Choice.listFrom<String, Map<String, String>>(
-              source: paymentTypes
-                  .map((p) => {'value': p.id.toString(), 'title': p.name})
-                  .toList(),
-              // [
-              //   {'value': 'VA', 'title': 'Vale Alimentação'},
-              //   {'value': 'VR', 'title': 'Vale Refeição'},
-              //   {'value': 'CC', 'title': 'Cartão de Crédito'},
-              // ],
-              title: (index, item) => item['title'] ?? '',
-              value: (index, item) => item['value'] ?? '',
-            ),
-            choiceType: S2ChoiceType.radios,
-            choiceGrouped: true,
-            modalFilter: false,
-            placeholder: '',
-          )
-        ],
-      ),
+                  ),
+                  Visibility(
+                    visible: !valid,
+                    child: const Divider(
+                      color: Colors.red,
+                      thickness: 1.5,
+                    ),
+                  ),
+                  Visibility(
+                    visible: !valid,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Text(
+                        'Selecione uma forma de pagamento',
+                        style: context.textStyles.textRegular
+                            .copyWith(fontSize: 13, color: Colors.red),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+          choiceItems: S2Choice.listFrom<String, Map<String, String>>(
+            source: paymentTypes
+                .map((p) => {'value': p.id.toString(), 'title': p.name})
+                .toList(),
+            // [
+            //   {'value': 'VA', 'title': 'Vale Alimentação'},
+            //   {'value': 'VR', 'title': 'Vale Refeição'},
+            //   {'value': 'CC', 'title': 'Cartão de Crédito'},
+            // ],
+            title: (index, item) => item['title'] ?? '',
+            value: (index, item) => item['value'] ?? '',
+          ),
+          choiceType: S2ChoiceType.radios,
+          choiceGrouped: true,
+          modalFilter: false,
+          placeholder: '',
+        ),
+      ],
     );
   }
 }

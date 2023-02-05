@@ -5,7 +5,7 @@ import '../../../core/ui/styles/text_styles.dart';
 class OrderField extends StatelessWidget {
   final String title;
   final TextEditingController controller;
-  final FormFieldValidator validator;
+  final FormFieldValidator<String> validator;
   final String hintText;
 
   const OrderField({
@@ -41,6 +41,7 @@ class OrderField extends StatelessWidget {
           ),
           TextFormField(
             controller: controller,
+            validator: validator,
             decoration: InputDecoration(
               hintText: hintText,
               border: defaultBorder,

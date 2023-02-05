@@ -43,8 +43,8 @@
 - [x] Criar IncrementDecrementButton.compact;
 - [x] Carregar os produtos na tela orderPage;
 - [x] Implementar authInterceptor para adicionar token na requisição;
-- [ ] Buscar dados de forma de pagamento;
-- [ ] Validação de formulários;
+- [x] Buscar dados de forma de pagamento;
+- [x] Validação de formulários;
 - [ ] Incrementar produto na OrderPage;
 - [ ] Decrementar produto na OrderPage;
 - [ ] Atualizar sacola ao voltar para o menu;
